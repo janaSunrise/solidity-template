@@ -1,0 +1,64 @@
+{
+  "name": "solidity-template",
+  "version": "1.0.0",
+  "description": "Solidity project template to get you up and running.",
+  "source": "src/index.ts",
+  "main": "dist/main/index.js",
+  "module": "dist/module/index.js",
+  "types": "dist/module/index.d.ts",
+  "files": [
+    "contracts/",
+    "abis/",
+    "dist/"
+  ],
+  "scripts": {
+    "build": "yarn hardhat:compile && yarn copy-abis",
+    "format": "prettier --write \"./**/*.{ts,tsx,json,md,sol}\"",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "clean": "yarn hardhat:clean && rimraf artifacts dist typechain abi build",
+    "test": "hardhat test",
+    "hardhat:compile": "hardhat compile",
+    "hardhat:clean": "hardhat clean",
+    "copy-abis": "ts-node copy-abis.ts",
+    "build:lib": "yarn run build && yarn run build:cjs && yarn run build:esm",
+    "build:cjs": "tsc --outDir ./dist/main",
+    "build:esm": "tsc --module esnext --outDir ./dist/module"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "@openzeppelin/contracts": "^4.6.0",
+    "@typechain/ethers-v5": "^10.0.0",
+    "@typechain/hardhat": "^6.0.0",
+    "@types/chai": "^4.3.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.14",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.1",
+    "ethereum-waffle": "^3.0.0",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.8.3",
+    "hardhat-gas-reporter": "^1.0.8",
+    "prettier": "^2.6.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "rimraf": "^3.0.2",
+    "solhint": "^3.3.7",
+    "solhint-plugin-prettier": "^0.0.5",
+    "ts-node": "^10.8.0",
+    "typechain": "^8.0.0",
+    "typescript": "^4.7.2"
+  },
+  "keywords": [],
+  "author": "0xSaturn team",
+  "license": "MIT",
+  "homepage": "https://github.com/0xsaturn/solidity-template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xsaturn/solidity-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0xsaturn/solidity-template/issues"
+  }
+}
