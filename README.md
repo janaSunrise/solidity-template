@@ -12,6 +12,9 @@ npm install -D
 yarn
 ```
 
+Any contracts written should use the `0.8.0` or the base pragma in order to retain
+backwards compatibility with all the versions of the compiler with same minor release.
+
 ### Setup environment variables
 
 Setup the `.env` variables based on the `.env.example` file as provided. Setup the file using
