@@ -2,7 +2,28 @@
 
 Quickly get up and running with a powerful Solidity project in no time.
 
-## Usage
+## ✨ Tech stack used
+
+- Hardhat. Tooling for compiling, deploying and testing smart contracts.
+- Ethers. Library with Ethereum and Wallet implementations.
+- Waffle, Chai. For testing the smart contracts comprehensively.
+- Solhint, Prettier. For linting and formatting of the code.
+- Gas reporter. For reporting gas usage of the smart contracts during testing.
+- Typechain. For generating type definitions for the smart contracts.
+
+## 👇 Pre-requisites
+
+Ensure that you have the following tools ready and installed to use this:
+
+- Git
+- Node.js
+
+Setup the environmental variables if you haven't yet.
+
+You can setup the `.env` variables based on the `.env.example` file as provided. Setup the file using
+`cp .env.example .env` and fill in the values.
+
+## 🛠 Usage
 
 Quickly get started by installing the dependencies.
 
@@ -12,13 +33,8 @@ npm install -D
 yarn
 ```
 
-Any contracts written should use the `0.8.0` or the base pragma in order to retain
+**NOTE** Any contracts written should use the `0.8.0` or a specific minor-version pragma in order to retain
 backwards compatibility with all the versions of the compiler with same minor release.
-
-### Setup environment variables
-
-Setup the `.env` variables based on the `.env.example` file as provided. Setup the file using
-`cp .env.example .env` and fill in the values.
 
 ### Build the project
 
@@ -28,8 +44,8 @@ You can build the project using:
 yarn run build
 ```
 
-Note that, If you're not using this as a library, remove the `build:lib` and all linked scripts. Else if you are,
-using this as a library that you want to publish, run `yarn run build:lib` instead.
+Note that, If you're not using this as a library, remove the `build:lib` and all linked scripts.
+Else if you are, using this as a library that you want to publish, run `yarn run build:lib` instead.
 
 ### Linting and formatting
 
@@ -38,7 +54,10 @@ Linting and formatting is provided by the solhint and prettier packages respecti
 You can lint/format the whole project as so:
 
 ```sh
+# Linting
 yarn run lint
+
+# Formatting
 yarn run format
 ```
 
