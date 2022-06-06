@@ -51,14 +51,14 @@
     "typescript": "^4.7.2"
   },
   "keywords": [],
-  "author": "0xSaturn team",
+  "author": "Sunrit Jana",
   "license": "MIT",
-  "homepage": "https://github.com/0xsaturn/solidity-template",
+  "homepage": "https://github.com/janaSunrise/solidity-template",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0xsaturn/solidity-template.git"
+    "url": "git+https://github.com/janaSunrise/solidity-template.git"
   },
   "bugs": {
-    "url": "https://github.com/0xsaturn/solidity-template/issues"
+    "url": "https://github.com/janaSunrise/solidity-template/issues"
   }
 }
