@@ -10,6 +10,7 @@ Quickly get up and running with a powerful Solidity project in no time.
 - Solhint, Prettier. For linting and formatting of the code.
 - Gas reporter. For reporting gas usage of the smart contracts during testing.
 - Typechain. For generating type definitions for the smart contracts.
+- Slither. For static analysis of the smart contracts for optimizations and possible vulnerabilities.
 
 ## 👇 Pre-requisites
 
@@ -38,14 +39,21 @@ backwards compatibility with all the versions of the compiler with same minor re
 
 ### Build the project
 
-You can build the project using:
+You can build the project using the following commands.
+
+If you're not using this as a library:
 
 ```sh
 yarn run build
 ```
 
-Note that, If you're not using this as a library, remove the `build:lib` and all linked scripts.
-Else if you are, using this as a library that you want to publish, run `yarn run build:lib` instead.
+If you are using this as a library:
+
+**NOTE** This runs the build command, and transpiles typescript typechain output to javascript.
+
+```sh
+yarn run build:lib
+```
 
 ### Linting and formatting
 
@@ -69,6 +77,22 @@ Run the tests as so:
 
 ```sh
 yarn run test
+```
+
+### Analyzing the contracts
+
+The project utilizes [Slither](https://github.com/crytic/slither) for performing static analysis of the smart contracts.
+
+To use this, you need to install it first. Ensure you have Python3 on your system, then run:
+
+```sh
+pip install slither-analyzer
+```
+
+If you're good to go, run the following command to analyze the smart contracts:
+
+```sh
+yarn run analyze
 ```
 
 ### Clean up project

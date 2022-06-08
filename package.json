@@ -17,9 +17,10 @@
     "lint": "solhint 'contracts/**/*.sol'",
     "clean": "yarn hardhat:clean && rimraf artifacts dist typechain abi build",
     "test": "hardhat test",
+    "analyze": "slither .",
+    "copy-abis": "ts-node copy-abis.ts",
     "hardhat:compile": "hardhat compile",
     "hardhat:clean": "hardhat clean",
-    "copy-abis": "ts-node copy-abis.ts",
     "build:lib": "yarn run build && yarn run build:cjs && yarn run build:esm",
     "build:cjs": "tsc --outDir ./dist/main",
     "build:esm": "tsc --module esnext --outDir ./dist/module"
