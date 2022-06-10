@@ -11,10 +11,10 @@ const copyAbis = async (fromPath: string, toPath: string) => {
   // Recursively detect all ABI JSON files.
   const abiFiles = glob.sync(`${fromPath}/**/*.json`);
 
-  // Ignore files with .dbg.json
+  // Ignore files ending with `.dbg.json`.
   const abiFilesToCopy = abiFiles.filter(file => !file.includes('.dbg.json'));
 
-  // Copy each ABI JSON file to the To directory.
+  // Copy each ABI JSON file to the destination directory.
   for (const abiFile of abiFilesToCopy) {
     fs.copyFileSync(abiFile, `${toPath}/${abiFile.split('/').pop()}`);
   }

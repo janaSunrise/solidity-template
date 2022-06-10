@@ -4,13 +4,13 @@ Quickly get up and running with a powerful Solidity project in no time.
 
 ## ✨ Tech stack used
 
-- Hardhat. Tooling for compiling, deploying and testing smart contracts.
-- Ethers. Library with Ethereum and Wallet implementations.
-- Waffle, Chai. For testing the smart contracts comprehensively.
-- Solhint, Prettier. For linting and formatting of the code.
-- Gas reporter. For reporting gas usage of the smart contracts during testing.
-- Typechain. For generating type definitions for the smart contracts.
-- Slither. For static analysis of the smart contracts for optimizations and possible vulnerabilities.
+- Hardhat - Tooling for compiling, deploying and testing smart contracts.
+- Ethers - Library with Ethereum and Wallet implementations.
+- Waffle and Chai - For testing the smart contracts comprehensively.
+- Solhint and Prettier - For linting and formatting of the code.
+- Hardhat Gas reporter - For reporting gas usage of the smart contracts during testing.
+- Typechain - For generating type definitions for the smart contracts.
+- Slither - For static analysis of the smart contracts for optimizations and possible vulnerabilities.
 
 ## 👇 Pre-requisites
 
